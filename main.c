@@ -10,9 +10,9 @@ typedef enum { LINE, RECTANGLE, CIRCLE, TRIANGLE } ShapeType;
 typedef struct {
     int id;
     ShapeType type;
-    int x1, y1, x2, y2, x3, y3; // Coordinates
-    int r;                      // Radius for circle
-    int active;                 // 1 if active, 0 if deleted
+    int x1, y1, x2, y2, x3, y3; 
+    int r;                      
+    int active;                 
 } Shape;
 
 
@@ -71,7 +71,7 @@ void drawCirclePoints(int xc, int yc, int x, int y) {
     drawPoint(xc + y, yc - x); drawPoint(xc - y, yc - x);
 }
 
-// Midpoint Circle Algorithm
+
 void drawCircleAlgo(int xc, int yc, int r) {
     int x = 0, y = r;
     int d = 3 - 2 * r;
@@ -101,8 +101,8 @@ void renderShapes() {
         } else if (s.type == RECTANGLE) {
             drawLineAlgo(s.x1, s.y1, s.x2, s.y1); 
             drawLineAlgo(s.x2, s.y1, s.x2, s.y2); 
-            drawLineAlgo(s.x2, s.y2, s.x1, s.y2); // Bottom
-            drawLineAlgo(s.x1, s.y2, s.x1, s.y1); // Left
+            drawLineAlgo(s.x2, s.y2, s.x1, s.y2); 
+            drawLineAlgo(s.x1, s.y2, s.x1, s.y1); 
         } else if (s.type == CIRCLE) {
             drawCircleAlgo(s.x1, s.y1, s.r);
         } else if (s.type == TRIANGLE) {
