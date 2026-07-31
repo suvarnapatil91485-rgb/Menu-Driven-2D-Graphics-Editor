@@ -159,7 +159,7 @@ Rectangle Added. ID = 1
 
 ## Author
 
-**Name:** Your Name
+**Name:** Suvarna
 
 **USN:** Your USN
 
